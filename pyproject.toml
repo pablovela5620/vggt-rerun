@@ -1,0 +1,63 @@
+[project]
+authors = [{ name = "pablovela5620", email = "pablovela5620@gmail.com" }]
+dependencies = []
+name = "vggt-rerun"
+requires-python = ">= 3.11"
+version = "0.1.0"
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[tool.pixi.pypi-dependencies]
+vggt_rerun = { path = ".", editable = true }
+torch = { version = ">=2.5.1", index = "https://download.pytorch.org/whl/cu124" }
+torchvision = { version = ">=0.20.1", index = "https://download.pytorch.org/whl/cu124" }
+torchcodec = { version = ">=0.2.0", index = "https://download.pytorch.org/whl/cu124" }
+vggt = { git = "https://github.com/pablovela5620/vggt.git" }
+simplecv = { git = "https://github.com/pablovela5620/simplecv.git", rev = "a279fb50e2e332cbf99fcb885c086b916bb3fd16" }
+
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = "==3.11"
+numpy = "<2"
+rerun-sdk = ">=0.22.1,<0.23"
+gradio = "<5"
+tyro = ">=0.9.1,<0.10"
+jaxtyping = ">=0.2.36,<0.3"
+beartype = ">=0.20.2,<0.21"
+py-opencv = ">=4.11.0,<5"
+pillow = ">=10.4.0,<11"
+huggingface_hub = ">=0.29.3,<0.30"
+einops = ">=0.8.1,<0.9"
+safetensors = ">=0.5.3,<0.6"
+markupsafe = ">=2.1.5,<3"
+
+[tool.ruff]
+line-length = 120
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+ignore = [
+    "E501", # Line too long.
+    "F722", # Forward annotation false positive from jaxtyping. Should be caught by pyright.
+    "F821", # Forward annotation false positive from jaxtyping. Should be caught by pyright.
+]
