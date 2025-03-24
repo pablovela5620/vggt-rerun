@@ -401,7 +401,7 @@ environments:
       - pypi: https://download.pytorch.org/whl/cu124/torchvision-0.21.0%2Bcu124-cp311-cp311-linux_x86_64.whl#sha256=137376805aca5ba57bd2c7a3ecb8569df961dbe82b128aac9b3b0a7125ef9385
       - pypi: https://files.pythonhosted.org/packages/a7/2e/757d2280d4fefe7d33af7615124e7e298ae7b8e3bc4446cdb8e88b0f9bab/triton-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/65/f3/107a22063bf27bdccf2024833d3445f4eea42b2e598abfbd46f6a63b6cb0/typing_inspect-0.9.0-py3-none-any.whl
-      - pypi: git+https://github.com/pablovela5620/vggt.git#f8bf73ac25d5089cca2d6540a185697087fa2255
+      - pypi: git+https://github.com/facebookresearch/vggt.git?rev=f8bf73ac25d5089cca2d6540a185697087fa2255#f8bf73ac25d5089cca2d6540a185697087fa2255
       - pypi: .
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -5212,7 +5212,7 @@ packages:
   - pkg:pypi/uvloop?source=hash-mapping
   size: 677289
   timestamp: 1730214493601
-- pypi: git+https://github.com/pablovela5620/vggt.git#f8bf73ac25d5089cca2d6540a185697087fa2255
+- pypi: git+https://github.com/facebookresearch/vggt.git?rev=f8bf73ac25d5089cca2d6540a185697087fa2255#f8bf73ac25d5089cca2d6540a185697087fa2255
   name: vggt
   version: 0.1.0
   requires_dist:
@@ -5238,7 +5238,7 @@ packages:
 - pypi: .
   name: vggt-rerun
   version: 0.1.0
-  sha256: 8984f6451968b0afe4895a285b116c74da5d6145be3f4662cb498d83247066da
+  sha256: 7cc9f3cbbf3a025d4b4f98d2fee309a6536d6ec0cfadb22a67358ca0e6bc85c6
   requires_python: '>=3.11'
   editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/watchfiles-1.0.4-py311h9e33e62_0.conda
